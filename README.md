@@ -1,4 +1,6 @@
-# Distributed MARL
+# SRL (**R**ea**L**ly **S**calable **RL**): Scaling Distributed Reinforcement Learning to Over Ten Thousand Cores
+
+**SRL** is an _efficient_, _scalable_ and _extensible_ distributed **Reinforcement Learning** system. **SRL** supports running several state-of-the-art RL algorithms on some common environments with one simple configuration file, and also exposes general APIs for users to develop their self-defined environments, policies and algorithms. **SRL** even allows users to implement new system components to support their algorithm designs, if current system architecture is not sufficient. 
 
 ## For algorithm developers
 
