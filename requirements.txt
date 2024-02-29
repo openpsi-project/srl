@@ -1,0 +1,14 @@
+pyzmq==24.0.1
+gym==0.26.2
+gym[atari]
+prometheus_client==0.11.0
+wandb~=0.13.4
+redis==4.0.2
+pymongo==4.0.1
+Deprecated==1.2.13
+einops==0.4.1
+kornia==0.6.4
+pysc2==3.0.0
+opencv-python==4.5.4.60
+torch==1.10.0
+numpy~=1.21.1

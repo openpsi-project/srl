@@ -1,0 +1,3 @@
+import legacy.algorithm.q_learning.game_policies.atari_dqn_policy
+# import legacy.algorithm.q_learning.game_policies.smac_qmix
+import legacy.algorithm.q_learning.game_policies.football_qmix

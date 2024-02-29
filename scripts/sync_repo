@@ -1,0 +1,17 @@
+#!/bin/bash
+set -xeu
+
+CMD='rsync -av --exclude bazel-* --exclude .git --exclude __pycache__ --exclude *darwin.so .'
+
+if [[ $@ == "sqzpc" ]]; then
+    $CMD 10.100.0.22:distributed_marl/
+    $CMD 10.100.0.21:distributed_marl/
+elif [[ $@ == "dev" ]]; then
+    $CMD 10.210.5.211:distributed_marl/
+elif [[ $@ == "prod" ]]; then
+    $CMD prod:distributed_marl/
+else
+    $CMD 10.210.14.4:distributed_marl/
+fi
+
+

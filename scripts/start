@@ -1,0 +1,4 @@
+#!/bin/bash
+set -xeu
+
+python3 -m apps.main start $@

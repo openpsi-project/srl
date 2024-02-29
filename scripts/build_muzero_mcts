@@ -1,0 +1,16 @@
+#!/bin/bash
+set -xeu
+
+BASEDIR=$(readlink -f "$0")
+BASEDIR=$(dirname "$BASEDIR")
+BASEDIR=$(dirname "$BASEDIR")
+container="marl/marl-cpu"
+command="bash legacy/algorithm/muzero/c_mcts/build.sh"
+
+if [[ $HOSTNAME == 'dev'* ]]; then
+  echo "Building mcts with container"
+  echo "Container $container"
+  echo "Command $command"
+  srun -n1 -c1 --container-image=$container --container-mount-home --container-workdir="$BASEDIR" bash -c "pip install -U pybind11 && $command"
+else $command
+fi
